@@ -24,7 +24,7 @@ const UserForm = ({ fetchUsers, editingUser, setEditingUser }) => {
     <form onSubmit={handleSubmit}>
       <input value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} placeholder="Name" />
       <input value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} placeholder="Email" />
-      <button type="submit">{editingUser ? 'Update' : 'Add'} User</button>
+      <button type="submit">{editingUser ? 'Update' : 'Add' } User</button>
     </form>
   );
 };

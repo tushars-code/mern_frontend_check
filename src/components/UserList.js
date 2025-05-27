@@ -13,7 +13,7 @@ const UserList = ({ users, fetchUsers, setEditingUser }) => {
         <li key={user._id}>
           {user.name} ({user.email})
           <button onClick={() => setEditingUser(user)}>Edit</button>
-          <button onClick={() => handleDelete(user._id)}>Delete</button>
+          <button onClick={() => handleDelete(user)}>Delete</button>
         </li>
       ))}
     </ul>

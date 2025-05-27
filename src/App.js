@@ -8,7 +8,7 @@ const App = () => {
   const [editingUser, setEditingUser] = useState(null);
 
   const fetchUsers = async () => {
-    const res = await axios.get('http://localhost:5000/api/users');
+    const res = await axios.get('https://mern-backend-check.onrender.com/api/users');
     setUsers(res.data);
   };
 

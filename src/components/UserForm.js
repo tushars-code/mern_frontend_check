@@ -11,10 +11,10 @@ const UserForm = ({ fetchUsers, editingUser, setEditingUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editingUser) {
-      await axios.put(`http://localhost:5000/api/users/${editingUser._id}`, formData);
+      await axios.put(`https://mern-backend-check.onrender.com/api/users/${editingUser._id}`, formData);
       setEditingUser(null);
     } else {
-      await axios.post('http://localhost:5000/api/users', formData);
+      await axios.post('https://mern-backend-check.onrender.com/api/users', formData);
     }
     fetchUsers();
     setFormData({ name: '', email: '' });

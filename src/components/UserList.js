@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const UserList = ({ users, fetchUsers, setEditingUser }) => {
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/users/${id}`);
+    await axios.delete(`https://mern-backend-check.onrender.com/api/users/${id}`);
     fetchUsers();
   };
 
@@ -13,7 +13,7 @@ const UserList = ({ users, fetchUsers, setEditingUser }) => {
         <li key={user._id}>
           {user.name} ({user.email})
           <button onClick={() => setEditingUser(user)}>Edit</button>
-          <button onClick={() => handleDelete(user)}>Delete</button>
+          <button onClick={() => handleDelete(user._id)}>Delete</button>
         </li>
       ))}
     </ul>
